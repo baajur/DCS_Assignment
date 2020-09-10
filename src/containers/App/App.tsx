@@ -44,7 +44,7 @@ class App extends React.PureComponent<AppProps, AppState> {
                 }}
             >
                 <div className='App'>
-                    <Router>
+                    <Router basename={process.env.PUBLIC_URL}>
                         <Header/>
                         <MessageDisplay/>
                         <Switch>
