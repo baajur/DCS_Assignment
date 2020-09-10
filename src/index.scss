@@ -1,0 +1,23 @@
+@import 'base.scss';
+@import 'default.scss';
+@import 'keyframes.scss';
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+  
+body {
+    @include box_sizing();
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to bottom right, $white, $aqua_white);
+
+    * {
+        @include box_sizing();
+    }
+}

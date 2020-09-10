@@ -1,0 +1,139 @@
+@import 'base.scss';
+
+.WeatherPanel {
+    @include transition();
+    padding: 0;
+    width: 30%;
+    background: transparent;
+    margin-top: 20px;
+    margin-right: 5%;
+
+    &:nth-child(3n) {
+        margin-right: 0%;
+    }
+
+    &.on-hover {
+        filter: brightness(1.2);
+    }
+
+    > .inner {
+        background: $aqua_darker;
+        box-shadow: 5px 5px 8px $grey;
+        border-radius: 5px;
+        padding: 10px;
+
+        > .actions {
+            width: 100%;
+            display: flex;
+
+            > button {
+                @include transition();
+                @extend .text_medium;
+                background: transparent;
+                border-radius: 50%;
+            
+                &.favorite {
+                    color: $grey;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+
+                    &.active {
+                        color: $yellow;
+                    }
+                }
+
+                &.close {
+                    margin-left: auto;
+                    color: $grey;
+                    
+                    &:hover {
+                        color: $red_light;
+                    }
+                }
+            }
+        }
+
+        > button {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            background: transparent;
+
+            > .left {
+                flex: 1;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                > .city {
+                    @extend .text_medium;
+                    color: $white;
+                    font-weight: 600;
+                }
+    
+                > .temp {
+                    @extend .text_larger;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                }
+    
+                > .description {
+                    @extend .text_medium;
+                    margin-top: auto;
+                    color: $white;
+                }
+            }
+    
+            > .right {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                > .additional {
+                    margin-top: auto;
+
+                    > .WeatherInformation {
+                        display: block;
+                        margin-bottom: 10px;
+                        color: $white;
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        width: 48%;
+        margin-right: 4%;
+
+        &:nth-child(3n) {
+            margin-right: 4%;
+        }
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+
+    @include mobile {
+        width: 100%;
+        margin-right: 0%;
+
+        &:nth-child(n) {
+            margin-right: 0;
+        }
+
+        > .inner {
+            > .actions {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import 'base.scss';
+
+.SearchWeatherInput {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    > .inner {
+        width: 30%;
+        
+        > input {
+            @extend .text_smedium;
+            width: 100%;
+            padding: 10px 20px 10px 50px;
+            border-radius: 25px;
+            border: 1px solid $grey;
+            box-shadow: 1px 1px 5px $grey;
+            color: $black;
+
+            &:focus {
+                border-color: $aqua_darker;
+            }
+        }
+
+        > i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: $grey;
+        }
+    }
+
+    > .SpinnerLoader {
+        flex: 1;
+        position: relative;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+
+    @include tablet {
+        > .inner {
+            width: 48%;
+        }
+    }
+
+    @include mobile {
+        > .inner {
+            width: 80%;
+        }
+    }
+}

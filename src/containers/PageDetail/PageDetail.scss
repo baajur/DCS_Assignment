@@ -1,0 +1,64 @@
+@import 'base.scss';
+
+.PageDetail {
+    background: $black;
+
+    > .inner {
+        position: relative;
+
+        > .no-data {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+             
+            > .icon {
+                @extend .text_xlarge;
+                margin-bottom: 10px;
+                color: $aqua;
+            }
+
+            > .message {
+                @extend .text_large;
+                margin-bottom: 20px;
+                color: $aqua;
+            }
+    
+            > .go-to-home {
+                @include transition();
+                text-decoration: none;
+                background: transparent;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: $aqua;
+                font-weight: 600;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    
+        > .content {
+            width: 100%;
+    
+            > .notes {
+                max-width: 400px;
+                margin: 50px auto 20px;
+    
+                > h3 {
+                    color: $white;
+                    margin-bottom: 20px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

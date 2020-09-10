@@ -1,0 +1,16 @@
+@import 'base.scss';
+
+.PageHome {
+    background: $aqua_white;
+    position: relative;
+
+    > .inner {
+        background: $aqua_white2;
+
+        > .weather-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

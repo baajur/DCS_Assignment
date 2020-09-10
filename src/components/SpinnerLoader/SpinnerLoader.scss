@@ -1,0 +1,39 @@
+@import 'base.scss';
+
+.SpinnerLoader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 22;
+	width: 100%;
+	height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	> .message {
+		@extend .text_medium;
+		color: $white;
+	}
+
+	&.cover-screen {
+		position: fixed;
+	}
+
+	&.transparent {
+		background-color: transparent;
+	}
+
+	&.top {
+		align-items: flex-start;
+		padding-top: 10px;
+	}
+
+	&.bottom {
+		align-items: flex-end;
+		padding-bottom: 10px;
+	}
+}

@@ -1,0 +1,19 @@
+@import 'base.scss';
+
+.WeatherInformation {
+    &.pressure {
+        color: $aqua_white;
+    }
+
+    &.humidity {
+        color: $blue_white;
+    }
+
+    &.wind {
+        color: $orange;
+    }
+
+    &.cloud {
+        color: $white;
+    }
+}

@@ -1,0 +1,59 @@
+@import 'base.scss';
+
+.PageLocation {
+    min-height: 100vh;
+    background: $black;
+    height: 100%;
+
+    > .inner {
+        background: $black;
+        padding-top: 50px;
+        position: relative;
+
+        > .ask-permission {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $aqua;
+    
+            > h4 {
+                @extend .text_xlarge;
+            }
+    
+            > p {
+                @extend .text_medium;
+                margin-top: 20px;
+            }
+        }
+
+        > .loader {
+            position: relative;
+            height: 5em;
+    
+            .message {
+                color: $black;
+            }
+        }
+    
+        > .LocationMap {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+        }
+    }
+
+    @include mobile {
+        > .inner {
+            > .LocationMap {
+                width: 350px;
+            }
+        }
+    }
+}

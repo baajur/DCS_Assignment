@@ -1,0 +1,9 @@
+@import 'base.scss';
+
+.Temperature {
+    color: $yellow;
+
+    &.f {
+        color: $aqua;
+    }
+}

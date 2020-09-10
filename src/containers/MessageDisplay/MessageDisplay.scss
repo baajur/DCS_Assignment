@@ -1,0 +1,107 @@
+@import 'base.scss';
+
+.MessageDisplay {
+    @include transition();
+    position: fixed;
+    bottom: 30px;
+    z-index: 50;
+    border: 1px solid $black;
+    box-shadow: 0 0 10px $black;
+    background: $white;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    border-radius: 5px;
+    
+    > .inner {
+        padding: 20px;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+
+        > .icon {
+            @extend .text_large;
+            color: $black;
+            margin-right: 20px;
+        }
+
+        > .content {
+            color: $blue;
+        }
+    }
+
+    &.show {
+        right: 30px;
+        transform: translateX(0%);
+        opacity: 0.8;
+    }
+
+    &.info {
+        background: $white;
+
+        > .inner {
+            > .icon {
+                color: $aqua_darker;
+            }
+
+            > .content {
+                color: $black;
+            }
+        }
+    }
+
+    &.error {
+        background: $white;
+        > .inner {
+            > .icon {
+                color: $red;
+            }
+
+            > .content {
+                color: $red_light;
+            }
+        }
+    }
+
+    &.favorite {
+        background: $black;
+        > .inner {
+            > .icon {
+                color: $yellow;
+            }
+
+            > .content {
+                color: $yellow;
+            }
+        }
+    }
+
+
+    &.delete {
+        background: $white;
+
+        > .inner {
+            > .icon {
+                color: $red;
+            }
+
+            > .content {
+                color: $black;
+            }
+        }
+    }
+
+    &.success {
+        background: $white;
+
+        > .inner {
+            > .icon {
+                color: $aqua_darker;
+            }
+
+            > .content {
+                color: $black;
+            }
+        }        
+    }
+}
