@@ -1,10 +1,10 @@
 # DCS_Assignment
 
-This is work for DCS_Assignment for Front-end Devleoper role
+This is work for DCS_Assignment for Front-end Developer role
 
 ## 1. Tech Stacks:
 
-- React / Typescript, Redux (redux-saga)
+- React / Typescript, Redux (redux-saga), SASS
 - Unit tests with Jest / Enzyme
 
 ## 2. Description:
